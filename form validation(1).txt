@@ -1,0 +1,84 @@
+
+<HTML>
+<HEAD>
+<script type="text/javascript">
+var a,b,c,d,e,f;
+function validataform()
+{
+a=document.forms["form1"]["name"].value;
+if(a=="")
+{
+alert("KINDLY FILL THE NAME");
+return false;
+}
+b=document.forms["form1"]["place"].value;
+if(b=="")
+{
+alert("KINDLY FILL THE PLACE");
+return false;
+}
+c=document.forms["form1"]["num"].value;
+if(c=="")
+{
+alert("KINDLY FILL THE PHONE NUMBER");
+}
+else if(c.length<10)
+{  
+  alert("Phone number must be at least 10 characters long.");  
+  return false;  
+}
+ 
+d=document.forms["form1"]["email"].value;
+if(d=="")
+{
+alert("KINDLY FILL THE EMAIL ID");
+}
+else if(d.Indexof("@",0)<0)
+{
+   alert("PLEASE INCLUDE @");
+}
+else if(d.Indexof(".",0)<0)
+{
+   alert("PLEASE INCLUDE DOT'.'");
+return false;
+}
+f=document.forms["form1"]["PASS"].value;
+if(f=="")
+{
+alert("KINDLY FILL THE PASSWORD");
+}
+else if(f.length<8)
+{  
+  alert("Password must be at least 8 characters long.");  
+  return false;  
+  } 
+e=document.forms["form1"]["address"].value;
+if(e=="")
+{
+alert("KINDLY FILL THE ADDRESS");
+return false;
+}
+}
+</script>
+</HEAD>
+<body>
+<form name="form1" onsubmit="return validataform()">
+ENTER NAME:<input type="text" name="name"><br><br>
+ENTER PLACE:<input type="text" name="place"><br><br>
+ENTER PHONE NUMBER:<input type="number" name="num"><br><br>
+ENTER EMAIL ID:<input type="text" name="email"><br><br>
+ENTER PASSWORD:<input type="password" name="PASS"><br><br>
+ENTER ADDRESS:<input type="text" name="address"><br><br>
+SELECT YOUR BATCH:<select name="dropdown">
+<option value="CSE" selected>CSE</option>
+<option value="ECE">ECE</option>
+<option value="MEC">MEC</option></select>
+<br><br>
+ENTER COMMENT:<textarea rows='5'cols='50'></textarea>
+<BR><br>
+<input type="button" value="SEND"/>
+<input type="submit" value="SUBMIT"/>
+
+</form>
+</body>
+</HTML>
